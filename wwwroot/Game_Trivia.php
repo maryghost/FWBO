@@ -1,0 +1,179 @@
+<?php
+
+	session_start();
+	if (isset($_POST['next']))
+	{
+		//$_SESSION['question']++;
+		header("Location:Game_Trivia.php?next=".$_SESSION['question']);
+	}
+
+?>
+<html>
+
+<head>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/play_trivia.css">
+	<link rel="stylesheet" href="css/web fonts/komikatitle_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/web fonts/roboto_boldcondensed_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/web fonts/roboto_condensed_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/web fonts/roboto_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+	
+	<script>
+		var isReset = false;
+		function validateSelection()
+		{
+			if (isReset) 
+				return true;
+			else
+			{
+				// if we are past the end of the questions OR we have an explanation to display, then skip validation.
+				if (<?php echo $_SESSION['question'] ?> > 10)
+					return true;
+			}
+			
+			var ok = false;
+			var answers = document.getElementsByName('answer');
+			for (var i = 0; i < answers.length; i++)
+			{
+				if (answers[i].checked)
+				{
+					ok = true;
+				}
+			}
+			
+			if (!ok)
+				alert("Please select an answer choice.");
+			
+			return ok;
+		}
+	</script>	
+	
+	
+	<title> Fly with Butch O'Hare </title>
+</head>
+
+<body>
+<div>
+	<a id="loginBtn" href="Login.html"> Log in </a>
+	
+	<!----------     Navigation Bar      ---------->
+	<a id="showBtn" class="menuToggle" href="#">Show</a>
+	<div id="menu" class="main-nav">
+		<a id="hideBtn" class="menuToggle" href="#menu">	Collapse	</a>
+		
+		<a href="Index.html">
+			<img src="images/navMenu/icon_home.png" alt="Home">			</a>
+		<a href="Index.html" class="menuLink">		Home				</a>
+		
+		<a href="Play.html">
+			<img src="images/navMenu/icon_game.png" alt="Play">			</a>
+		<a href="Play.html" class="menuLink">		Play				</a>
+		<!-- 
+		<a href="Filter.html">
+			<img src="images/navMenu/icon_filter.png" alt="home">		</a>
+		<a href="Filter.html" class="menuLink">		Filter				</a>
+		 -->
+		<a href="Score.html">
+			<img src="images/navMenu/icon_trophy.png" alt="home">		</a>
+		<a href="Score.html" class="menuLink">		Score				</a>
+		
+		<a href="Map.html">
+			<img src="images/navMenu/icon_map.png" alt="home">			</a>
+		<a href="Map.html" class="menuLink">			Map				</a>
+		
+		<a href="Credits.html">
+			<img src="images/navMenu/icon_home.png" alt="home">			</a>
+		<a href="Credits.html" class="menuLink">		Credits			</a>
+	</div>
+
+	
+	<!----------          Container         ---------->
+	<div class="container-wrap">
+	<div class="container">
+		<!----------         Header        ---------->
+		<div id="header">
+			<h1>Airport Trivia</h1>
+		</div>
+		
+		<!----------         Content       ---------->
+		<!--<div id="content">
+		
+			<div id= 'quiz'>
+				<input type='button' class='button' value='Next' id='next'><a href='#'></a></div> 
+				<input type='button' class='button' value='prev' id='prev'><a href='#'></a></div>
+			</div>
+			<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>          
+			<script type='text/javascript' src="javascript/play_trivia.js"> </script>
+			
+		</div>-->
+		
+		<div id="content">
+			<?php
+				if (!isset($explain))
+					include('scripts/triviascriptsproject/TriviaSelect.php'); 
+			?>
+	<script>
+		function checkAnswer(isReset)
+		{
+			if (isReset || !validateSelection()) return;
+			
+			var correctAnswer = "<?php echo $_SESSION['questionAnswer']; ?>";
+			
+			var answerChoices = document.getElementsByName('answer');
+			
+			for (var i = 0; i < answerChoices.length; i++)
+			{
+				if (answerChoices[i].checked && answerChoices[i].value == correctAnswer)
+				{
+					document.frmQuiz.scoreIncrement.value = 1;
+					//alert("CORRECT!");
+				}
+			}
+		}
+		
+		function resetGame()
+		{
+			isReset = true;
+		}
+	</script>
+
+		<form method = 'post' action = 'scripts/triviascriptsproject/displayScore.php' id= 'quiz' name='frmQuiz' onsubmit='return validateSelection();' >
+			<input type="hidden" name="scoreIncrement" value="0" />
+			<?php
+				if (isset($explain))
+					echo $explain;
+				else
+				{
+					if ($_SESSION['question'] <= 10)
+						echo "<input type='submit' class='button' value='Submit Answer' id='submitAnswer' name='submitAnswer' ".
+					         " onclick='checkAnswer(false);'>";
+					else
+						echo '<input type="submit" class="button" value="Play Again" id="reset" name="reset" onclick="checkAnswer(true);">';
+				}
+			?>
+		</form>
+		</div>
+
+		<!----------         Footer       ----------->
+		<div id="footer">
+			<a id="cda_logo" href="http://www.flychicago.com">
+				<img src="images/social/cda_logo.png"></a>
+			<div class="social">
+				<img src="images/social/share_hashtag.png"><br>
+				<a href="https://twitter.com/fly2ohare" target="_blank">
+					<img src="images/social/share_twitter.png"></a>
+				<a href="https://www.instagram.com/flyohare/" target="_blank">
+					<img src="images/social/share_instagram.png"></a>
+				<a href="https://www.facebook.com/fly2ohare/" target="_blank">
+					<img src="images/social/share_facebook.png"></a>
+				<a href="https://www.pinterest.com/flychicago/" target="_blank">
+					<img src="images/social/share_pinterest.png"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+	
+
+</html>

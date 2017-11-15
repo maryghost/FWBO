@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/***************** Global *****************/
+#content
+{
+	text-align: center;
+}
+
+.gamePreview
+{
+	background-color: #1B75BC;
+	border: 2px solid #d6491c;
+	border-radius: 5px;
+
+	display: inline-block;
+	margin: 6px;
+	text-align: center;
+	text-transform: none;
+	vertical-align: top;
+	width: 400px;
+}
+
+.gamePreview a
+{
+	text-align: center;
+}
+
+.gamePreview a:hover
+{
+	color:#fff;
+}
+
+.gamePreview img
+{
+	background-color: #50A0DC;
+	width: 100%;
+}
+
+.gamePreview p
+{
+	color: #ffffff;
+	margin: 0;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 0;
+}
+/*******************************************/
+
+/**************** Responsive ****************/
+@media only screen and (max-width:480px)
+{
+body
+{
+	font-size: 0.85em;
+}
+
+td
+{
+	font-size: 0.85em;
+}
+
+.main-nav
+{
+	width: 60px;
+}
+
+.container
+{
+	border-radius: 0;
+	padding-left: 60px;
+	padding-right: 0;
+	right: 0;
+}
+}
+/********************************************/

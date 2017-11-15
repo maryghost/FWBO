@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/***************** Global *****************/
+
+.button
+{
+	background: #fff;
+	border: 1px solid #1B75BC;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 2px 4px;
+}
+
+.button a
+{
+	color:#1B75BC;
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="css/layout.css"  type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="css/fonts.css" type="text/css" charset="utf-8">
+	<script type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<title> Fly with Butch O'Hare </title>
+</head>
+
+<body class="body">
+<div style="width:100%;margin:0 auto;">
+	<div class="container">
+		<!------------------ Sidebar ------------------->
+		<div class="sidebar">
+			<div class="menu">
+				<a href="Index.html">
+				<img src="images/navMenu/icon_home.png" alt="Home">			</a><br>
+				<span class="menu_text">
+					<a href="Index.html">HOME</a>
+				</span>
+			</div>
+			<div class="menu">
+				<a href="Play.html">
+				<img src="images/navMenu/icon_game.png" alt="Play">			</a><br>
+				<span class="menu_text">
+					<a href="Play.html">PLAY</a>
+				</span>
+			</div>
+			<div class="menu">
+				<a href="Score.html">
+				<img src="images/navMenu/icon_trophy.png" alt="Score">			</a><br>
+				<span class="menu_text">
+					<a href="Index.html">SCORE</a>
+				</span>
+			</div>
+			<div class="menu">
+				<a href="Map.html">
+				<img src="images/navMenu/icon_map.png" alt="Map">			</a><br>
+				<span class="menu_text">
+					<a href="Map.html">MAP</a>
+				</span>
+			</div>
+			<div class="menu">
+				<a href="Credits.html">
+				<img src="images/navMenu/icon_home.png" alt="Credits">			</a><br>
+				<span class="menu_text">
+					<a href="Credits.html">CREDITS</a>
+				</span>
+			</div>
+			<br>
+			<br>
+		</div>
+			
+		<!----------         Content       ---------->
+		<div id="content">
+			<div id="logo-header">
+				<img src="images/fwb_header.jpg" alt="Fly with Butch O'Hare" height="295" width="900">
+			</div>
+			
+			<!----------       Page Content      ---------->
+			<div id="page_content">
+				<div class="message">
+					<form name="UserRegistration" autocomplete="on">
+	     
+					<fieldset>
+						<legend>Sign In</legend>	 
+						<table>
+							<tr>
+								<td>Email Address:</td>  <td><input type="text" id="email" name="email" required/></td> 
+							</tr>
+							<tr>
+								<td>Password:</td>  <td><input type="password" id="pw" name="pw" required /></td>
+							</tr>
+					
+						</table>
+						<input type="button" value="Sign In" onclick="SignIn()"/>
+						<text id="add_err">
+						<script>
+							function SignIn(el, evt) {
+								username=$("#email").val();
+								password=$("#pw").val();
+					
+								$.ajax({
+									type: "POST",
+									url: "./scripts/Login.php",
+									data: {
+										username: username,
+										password:password
+									},
+									dataType: 'JSON',
+									beforeSend:function() {
+										$("#add_err").html("Loading...")
+									}
+								})
+								.done(function(resp){ 	
+									if (resp.status) {
+										$("#login_form").fadeOut("normal");
+										$("#shadow").fadeOut();
+										$("#profile").html("<a href='logout.php' class='red' id='logout'>Logout</a>");
+										// You can redirect to other page here....
+										window.location.href = 'Play.html';
+									}
+									else {
+										$("#add_err").html(resp.message);
+									}
+								});
+								return false;
+							};
+						</script>
+					</fieldset>	 
+					
+					<p> Or </p>
+					
+					<fieldset>
+						<legend>Sign Up</legend>
+						<table>
+							<tr><td>First Name: </td>  <td><input type="text" id="fName" name="fName" required/></td></tr>
+							<tr><td> Last Name: </td>  <td><input type="text" id="lName" name="lName" required/></td></tr>
+							<tr><td>Email Address: </td>   <td><input type="text" id="emailAddress" name="emailAddress" required/></td></tr>
+							<tr><td>Password: </td>   <td><input type="password" id="password" name="password" required/></td></tr>
+							<tr><td>Confirm Password: </td>   <td><input type="password" id="password2" name="password2" required/></td></tr>
+							<tr><td>Age: </td>  <td><input type="int" id="age" name="age" /></td></tr>
+							<tr><td>Birth Date: </td>   <td><input type="date" id="bday" name="bday"></td></tr>
+							<tr><td>Gender: </td>
+								<td><input type="radio" name="gender" value="male" checked> Male
+									<input type="radio" name="gender" value="female"> Female
+									<input type="radio" name="gender" value="other"> Other </td></tr>
+							<tr><td>Terminal Number: </td>
+								<td><select name="Terminal">
+									<option value="Terminal 1" selected>Terminal 1</option>
+									<option value="Terminal 2">Terminal 2</option>
+									<option value="Terminal 3">Terminal 3</option>
+									</select></td></tr>
+						</table>
+						<p>-- Password must be at least 6 characters long with one number and one capital letter --</p>
+						<input type="button" value="Register" onclick="Register()"  />
+						<text id="add_err2">
+						<script>
+							function Register(el, evt) {
+							
+								fName = $("#fName").val();
+								lName = $("#lName").val();
+								emailAddress = $("#emailAddress").val();
+								password = $("#password").val();
+								password2= $("#password2").val();
+								age = $("#age").val();
+								birth_date = $("#bday").val();
+								
+								if(emailAddress == "") {
+									alert("Error: Email Address cannot be blank!");
+									form.emailAddress.focus();
+									return false;
+								}
+								re = /^([1-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|6[0-9]|7[0-9]|8[0-9]|9[0-9]|10[0-9]|11[0-9]|12[0-9]|13[0-9]|14[0-9]|150)$/;
+								if(!re.test(age)) {
+									alert("Error: Age must be a number (1-150)!");
+									form.age.focus();
+									return false;
+								}
+								if(password != "" && password == password2) {
+									if(password.length < 6) {
+										alert("Error: Password must contain at least six characters!");
+										form.password.focus;
+										return false;
+									}
+									if(password == emailAddress) {
+										alert("Error: Password must be different from Username!");
+										form.password.focus();
+										return false;
+									}
+									re = /[0-9]/;
+									if(!re.test(password)) {
+										alert("Error: Password must contain at least one number (0-9)!");
+										form.password.focus();
+										return false;
+									}
+									re = /[a-z]/;
+									if(!re.test(password)) {
+										alert("Error: Password must contain at least one lowercase letter (a-z)!");
+										form.password.focus();
+										return false;
+									}
+									re = /[A-Z]/;
+									if(!re.test(password)) {
+										alert("Error: Password must contain at least one uppercase letter (A-Z)!");
+										form.password.focus();
+										return false;
+									}
+																			
+										$.ajax({
+											type: "POST",
+											url: "./scripts/Register.php",
+											data: {
+												fName:fName,
+												lName:lName,
+												emailAddress:emailAddress,
+												password:password,
+												age:age,
+												bday:birth_date
+											},
+											dataType: 'JSON',
+											beforeSend:function() {
+												$("#add_err2").html("Loading...")
+											}
+										})
+										.done(function(resp){ 	
+											if (resp.status) {
+												$("#login_form").fadeOut("normal");
+												$("#shadow").fadeOut();
+												$("#profile").html("<a href='logout.php' class='red' id='logout'>Logout</a>");
+												// You can redirect to other page here....
+												$("#add_err2").html(resp.message);
+											}
+											else {
+												$("#add_err2").html(resp.message);
+											}
+										});
+										return false;
+								} else {
+									alert("Error: Please check that you've entered and confirmed your password!");
+									form.password.focus();
+									return false;
+								}
+							};
+						</script>
+					</fieldset>
+					</form>
+					<text id="disclaimer"></text>
+				</div>
+			</div>
+			
+			<!------------------ Social Media ------------------->
+			<div id="social-media">
+				<div class="social_left">
+					<a href="http://www.flychicago.com/">
+						<img src="images/social/cda_logo.png"></a>
+				</div>
+				<div class="social_right">
+					<img src="images/social/share_hashtag.png"><br>
+					<a href="https://twitter.com/fly2ohare" target="_blank">
+					<img src="images/social/share_twitter.png"></a>
+				<a href="https://www.instagram.com/flyohare/" target="_blank">
+					<img src="images/social/share_instagram.png"></a>
+				<a href="https://www.facebook.com/fly2ohare/" target="_blank">
+					<img src="images/social/share_facebook.png"></a>
+				<a href="https://www.pinterest.com/flychicago/" target="_blank">
+					<img src="images/social/share_pinterest.png"></a>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		
+		<div style="clear:both;"></div>
+		
+	</div>
+	
+	<!------------------ Footer ------------------->
+	<div id="footer-container">
+		<div id="footer-content">
+			<div id="footer-left">
+				<a href="http://www.flychicago.com/">FlyChicago.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://www.devry.edu/" target="_blank">DeVry University</a>
+			</div>
+			<div id="footer-center">Developed by Unison Retail Management</div>
+			<div id="footer-right"><a href="http://www.flychicago.com/FlywithButchOHare/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="copyright"> © 2017</span></div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+</div>
+</body>
+	<script>
+	printPlay();
+	function getCookie(cname){
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for (var i = 0; i < ca.length; i++){
+			var c = ca[i];
+			while (c.charAt(0) == ' '){
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0){
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	function printPlay(){
+		var myCookie = getCookie("PHPSESSID");
+		
+		if (myCookie == ''){
+			//alert("cookie is null");
+			return;
+		}
+		else
+		{
+			//alert(document.cookie);
+			document.getElementById("disclaimer").innerHTML = "<h3>Disclaimer:</h3>\r\n\r\nThese videos and images are for your personal use only, and cannot be used for any commercial purpose. The use or duplication of these images by any agency, company, or business entity other than the City of Chicago, without express prior written permission from the City of Chicago's Department of Aviation, is strictly prohibited.\r\n\r\nWhile all reasonable precautions are taken to secure this site, CDA, Unison Consulting, and its affiliates will not assume responsibility or liability for any damages to personal property resulting from virus infection, destructive code, or other information technology related issues or problems (such as hacking, spam, spyware, etc.) and we encourage you to have appropriate and up to date anti-virus software.";
+
+		}
+	}
+	</script>
+</html>
