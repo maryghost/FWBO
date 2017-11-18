@@ -178,7 +178,6 @@
 	</div> <!-- social -->
 </div> <!-- container -->
 </div> <!-- container-wrap -->
-</div>
 </body>
 
 	
