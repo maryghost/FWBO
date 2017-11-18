@@ -80,6 +80,8 @@ function gameStart()
 	var stores = new Stores();
 	var scenery = new Scenery();
 
+	var buttons = new ArrowButtons();
+	
 	// Snippet requires node.js
 	//var fs = require('fs');
 	//var files = fs.readdirSync('/images/Storefronts_EAT/');
@@ -122,11 +124,34 @@ function gameStart()
 		scenery.draw();
 		stores.draw();
 		player.draw();
+		buttons.draw();
 			
 		if(gamePlaying)
 			timeOut = setTimeout(draw, 50);
 	}
 
+	function ArrowButtons()
+	{
+		this.imgLeft = new Image();
+		this.imgLeft.src = "images/play_flying/arrow-left.png";
+		
+		this.imgRight = new Image();
+		this.imgRight.src = "images/play_flying/arrow-right.png";
+
+		this.draw = function()
+		{
+			var size = canvas.width / 10;
+			var center = screen.width / 2;
+			var spacing = screen.width / 5;
+			var y = canvas.height - size - 10;
+			var leftX = center-spacing-this.imgLeft.width/2;
+			var rightX = center+spacing-this.imgRight.width/2;
+
+			context.drawImage(this.imgLeft, leftX, y, size, size);
+			context.drawImage(this.imgRight, rightX, y, size, size);
+		}
+	}
+	
 	function Scenery()
 	{
 		this.imgWindow = new Image();
@@ -383,8 +408,6 @@ function gameStart()
 	// Touch Events for Windows 10
 	document.onmousedown = mouseDown;
 	document.onmouseup = touchend;
-	//document.addEventListener('mouseDown', mouseDown, false);
-	//document.addEventListener('mouseUp', touchend, false);
 
 	function touchstart(e) {
 		var x = e.changedTouches[0].pageX;
