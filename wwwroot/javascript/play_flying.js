@@ -412,7 +412,7 @@ function gameStart()
 	function touchstart(e) {
 		var x = e.changedTouches[0].pageX;
 
-		if(x < canvas.width/2)
+		if(x < screen.width/2)
 		{
 			player.action = ACTION_MOVE;	
 			player.direction = DIRECTION_LEFT;
