@@ -11,15 +11,17 @@
 	}
 
 ?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
 	<link rel="stylesheet" href="css/layout.css">
 	<link rel="stylesheet" href="css/play_trivia.css">
-	<link rel="stylesheet" href="css/webfonts/komikatitle_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-	<link rel="stylesheet" href="css/webfonts/roboto_boldcondensed_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-	<link rel="stylesheet" href="css/webfonts/roboto_condensed_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-	<link rel="stylesheet" href="css/webfonts/roboto_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/webfonts/komikatitle_regular_macroman/stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="css/webfonts/roboto_boldcondensed_macroman/stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="css/webfonts/roboto_condensed_macroman/stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="css/webfonts/roboto_regular_macroman/stylesheet.css" type="text/css" />
 	
 	<script>
 		var isReset = false;
@@ -59,7 +61,7 @@
 <div>
 	<a id="loginBtn" href="Login.html"> Log in </a>
 	
-	<!----------     Navigation Bar      ---------->
+	<!--     Navigation Bar      -->
 	<a id="showBtn" class="menuToggle" href="#">Show</a>
 	<div id="menu" class="main-nav">
 		<a id="hideBtn" class="menuToggle" href="#menu">	Collapse	</a>
@@ -91,16 +93,16 @@
 
 
 	
-	<!----------          Container         ---------->
+	<!--          Container         -->
 	<div class="container-wrap">
 	<div class="container">
-		<!----------         Header        ---------->
+		<!--         Header        -->
 		<div id="header">
 			<h1>Airport Trivia</h1>
 		</div> <!-- header -->
 
 		
-		<!----------         Content       ---------->
+		<!--         Content       -->
 		<!--<div id="content">
 		
 			<div id= 'quiz'>
@@ -159,7 +161,7 @@
 		</form>
 		</div> <!-- content -->
 
-		<!----------         Footer       ----------->
+		<!--         Footer       -->
 		<div id="footer">
 			<a id="cda_logo" href="http://www.flychicago.com">
 				<img src="images/social/cda_logo.png"></a>
