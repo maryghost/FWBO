@@ -220,21 +220,34 @@ function gameStart()
 			this.storeFiles[9] = PATH_EAT + "EAT_CIBO_T2_MainHall.png";
 			this.storeFiles[10] = PATH_EAT + "EAT_CIBO_T3_H1.png";
 			this.storeFiles[11] = PATH_EAT + "EAT_DunkinDonuts_T3_H5.png";
-			this.storeFiles[12] = PATH_EAT + "EAT_GarrettPopcorn_T1_B8.png";
-			this.storeFiles[13] = PATH_EAT + "EAT_GarrettPopcorn_T3_H2.png";
-			this.storeFiles[14] = PATH_EAT + "EAT_GoldCoastDogs_T3_L4.png";
-			this.storeFiles[15] = PATH_EAT + "EAT_GreenMarket_T3_L3.png";
-			this.storeFiles[16] = PATH_EAT + "EAT_ICE_T3_L1.png";
-			this.storeFiles[17] = PATH_EAT + "EAT_LaTapenade_T1_B4.png";
-			this.storeFiles[18] = PATH_EAT + "EAT_LaTapenade_T3_H14.png";
-			this.storeFiles[19] = PATH_EAT + "EAT_NutsonClark_T1_C19.png";
-			this.storeFiles[20] = PATH_EAT + "EAT_NutsonClark_T2_E4.png";
-			this.storeFiles[21] = PATH_EAT + "EAT_NutsonClark_T3_H8.png";
-			this.storeFiles[22] = PATH_EAT + "EAT_Obriens_T3_H5.png";
-			this.storeFiles[23] = PATH_EAT + "EAT_StanleysBlackhawks_T2_E5.png";
-			this.storeFiles[24] = PATH_EAT + "EAT_Tuscany_T1_B18.png";
-			this.storeFiles[25] = PATH_EAT + "EAT_WolfgangExpress_T3_K12.png";
+			this.storeFiles[12] = PATH_EAT + "EAT_FreshMarketontheGo_T1_C23.png";
+			this.storeFiles[13] = PATH_EAT + "EAT_GarrettPopcorn_T1_B8.png";
+			this.storeFiles[14] = PATH_EAT + "EAT_GarrettPopcorn_T3_H2.png";
+			this.storeFiles[15] = PATH_EAT + "EAT_GoldCoastDogs_T3_L4.png";
+			this.storeFiles[16] = PATH_EAT + "EAT_GreenMarket_T3_L3.png";
+			this.storeFiles[17] = PATH_EAT + "EAT_ICE_T3_L1.png";
+			this.storeFiles[18] = PATH_EAT + "EAT_JambaJuice_T1_B7.png";
+			this.storeFiles[19] = PATH_EAT + "EAT_LaTapenade_T1_B4.png";
+			this.storeFiles[20] = PATH_EAT + "EAT_LaTapenade_T3_H14.png";
+			this.storeFiles[21] = PATH_EAT + "EAT_NutsonClark_T1_C19.png";
+			this.storeFiles[22] = PATH_EAT + "EAT_NutsonClark_T2_E4.png";
+			this.storeFiles[23] = PATH_EAT + "EAT_NutsonClark_T3_H8.png";
+			this.storeFiles[24] = PATH_EAT + "EAT_Obriens_T3_H5.png";
+			this.storeFiles[25] = PATH_EAT + "EAT_RockyMountainChocolateFactory_T1_B14.png";
+			this.storeFiles[26] = PATH_EAT + "EAT_RockyMountainChocolateFactory_T3_H5.png";
+			this.storeFiles[27] = PATH_EAT + "EAT_SmoothieKing-TheGrove_T1_B6.png";
+			this.storeFiles[28] = PATH_EAT + "EAT_StanleysBlackhawks_T2_E5.png";
+			this.storeFiles[29] = PATH_EAT + "EAT_Subway_T3_Rotunda.png";
+			this.storeFiles[30] = PATH_EAT + "EAT_Tuscany_T1_B18.png";
+			this.storeFiles[31] = PATH_EAT + "EAT_WolfgangExpress_T3_K12.png";
 
+			this.storeFiles[32] = PATH_SHOP + "SHOP_Barbaras_T1_B10.png";
+			this.storeFiles[33] = PATH_SHOP + "SHOP_Barbaras_T1_C15.png";
+			this.storeFiles[34] = PATH_SHOP + "SHOP_Barbaras_T2_E5.png";
+			this.storeFiles[35] = PATH_SHOP + "SHOP_Barbaras_T3_G1B.png";
+			this.storeFiles[36] = PATH_SHOP + "SHOP_Barbaras_T3_H4.png";
+			// TODO: Finish loading storefronts.
+			
 			for (var i = 0; i < this.storeFiles.length; i++)
 			{
 				this.storeImages[i] = new Image();
