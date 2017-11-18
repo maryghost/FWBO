@@ -140,12 +140,12 @@ function gameStart()
 
 		this.draw = function()
 		{
-			var size = canvas.width / 10;
-			var center = screen.width / 2;
-			var spacing = screen.width / 5;
-			var y = canvas.height - size - 10;
-			var leftX = center-spacing-this.imgLeft.width/2;
-			var rightX = center+spacing-this.imgRight.width/2;
+			var size = 800 / 8;
+			var center = 800 / 2;
+			var spacing = 800 / 4;
+			var y = 480 - size - 10;
+			var leftX = center-spacing-size/2;
+			var rightX = center+spacing-size/2;
 
 			context.drawImage(this.imgLeft, leftX, y, size, size);
 			context.drawImage(this.imgRight, rightX, y, size, size);
