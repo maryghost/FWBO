@@ -430,8 +430,9 @@ function gameStart()
 	}
 
 	function mouseDown(e) {
-		var x = e.clientX;
-
+		//var x = e.clientX;
+		var x = e.screenX;
+		
 		if(x < screen.width/2)
 		{
 			player.action = ACTION_MOVE;	
