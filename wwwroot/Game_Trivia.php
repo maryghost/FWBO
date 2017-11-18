@@ -84,7 +84,8 @@
 		<a href="Credits.html">
 			<img src="images/navMenu/icon_home.png" alt="home">			</a>
 		<a href="Credits.html" class="menuLink">		Credits			</a>
-	</div>
+	</div> <!-- menu -->
+
 
 	
 	<!----------          Container         ---------->
@@ -93,7 +94,8 @@
 		<!----------         Header        ---------->
 		<div id="header">
 			<h1>Airport Trivia</h1>
-		</div>
+		</div> <!-- header -->
+
 		
 		<!----------         Content       ---------->
 		<!--<div id="content">
@@ -152,7 +154,7 @@
 				}
 			?>
 		</form>
-		</div>
+		</div> <!-- content -->
 
 		<!----------         Footer       ----------->
 		<div id="footer">
@@ -168,9 +170,11 @@
 					<img src="images/social/share_facebook.png"></a>
 				<a href="https://www.pinterest.com/flychicago/" target="_blank">
 					<img src="images/social/share_pinterest.png"></a>
-			</div>
-		</div>
-	</div>
+			</div> <!-- social -->
+		</div> <!-- footer -->
+	</div> <!-- social -->
+</div> <!-- container -->
+</div> <!-- container-wrap -->
 </div>
 </body>
 
