@@ -48,6 +48,11 @@
 			$output = "<h2>Question " . $pool . ":</h2>";
 		else
 		{
+			$pool = 0;
+			$_SESSION['question'] = 0;
+			$_SESSION['numCorrect'] = 0;
+
+			header("Location:trivia_end.html");
 			$output = "<h2>Thanks for playing!</h2>";
 			$output .= "<p>You correctly answered " . $_SESSION['numCorrect'] . " out of 10 questions.</p>";
 		}

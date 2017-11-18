@@ -1,6 +1,9 @@
 <?php
 
 	session_start();
+	if (!isset($_SESSION['question']))
+		$_SESSION['question'] = 0;
+	
 	if (isset($_POST['next']))
 	{
 		//$_SESSION['question']++;
@@ -13,10 +16,10 @@
 <head>
 	<link rel="stylesheet" href="css/layout.css">
 	<link rel="stylesheet" href="css/play_trivia.css">
-	<link rel="stylesheet" href="css/web fonts/komikatitle_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-	<link rel="stylesheet" href="css/web fonts/roboto_boldcondensed_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-	<link rel="stylesheet" href="css/web fonts/roboto_condensed_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-	<link rel="stylesheet" href="css/web fonts/roboto_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/webfonts/komikatitle_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/webfonts/roboto_boldcondensed_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/webfonts/roboto_condensed_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/webfonts/roboto_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
 	
 	<script>
 		var isReset = false;
