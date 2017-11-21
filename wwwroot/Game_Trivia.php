@@ -14,15 +14,18 @@
 
 <!DOCTYPE html>
 <html>
-
-<head>
+	<head>
 	<link rel="stylesheet" href="css/layout.css">
 	<link rel="stylesheet" href="css/play_trivia.css">
 	<link rel="stylesheet" href="css/webfonts/komikatitle_regular_macroman/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="css/webfonts/roboto_boldcondensed_macroman/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="css/webfonts/roboto_condensed_macroman/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="css/webfonts/roboto_regular_macroman/stylesheet.css" type="text/css" />
-	
+	<style>
+
+.message li 	{list-style:none;
+}
+</style>
 	<script>
 		var isReset = false;
 		function validateSelection()
@@ -51,59 +54,37 @@
 			
 			return ok;
 		}
-	</script>	
-	
-	
-	<title> Fly with Butch O'Hare </title>
-</head>
+	</script>
+	<title>Fly with Butch O'Hare</title>
+	</head>
 
-<body>
-<div>
-	<a id="loginBtn" href="Login.html"> Log in </a>
-	
-	<!--     Navigation Bar      -->
-	<a id="showBtn" class="menuToggle" href="#">Show</a>
-	<div id="menu" class="main-nav">
-		<a id="hideBtn" class="menuToggle" href="#menu">	Collapse	</a>
-		
-		<a href="Index.html">
-			<img src="images/navMenu/icon_home.png" alt="Home">			</a>
-		<a href="Index.html" class="menuLink">		Home				</a>
-		
-		<a href="Play.html">
-			<img src="images/navMenu/icon_game.png" alt="Play">			</a>
-		<a href="Play.html" class="menuLink">		Play				</a>
-		<!-- 
+	<body><!--     LOGIN    REMOVED LOGIN MLP   
+<div> <a id="loginBtn" href="Login.html"> Log in </a> -->
+      
+      <!--     Navigation Bar   REMOVED SHOW TOGGLE MLP   
+      <a id="showBtn" class="menuToggle" href="#">Show</a>--> 
+      
+
+
+      
+
+    <div class="container" style="background-color:#ffffff;"> <div class="sidebar">
+      <div id="menu" class="main-nav"> <!-- CUT COLLAPSE MLP    <a id="hideBtn" class="menuToggle" href="#menu"> Collapse </a> --><a href="Index.html"> <img src="http://www.flywithbutchohare.com/images/navMenu/icon_home.png" alt="Home"> </a> <a href="Index.html" class="menuLink"> Home </a> <a href="Play.html"> <img src="http://www.flywithbutchohare.com/images/navMenu/icon_game.png" alt="Play"> </a> <a href="Play.html" class="menuLink"> Play </a> 
+    <!-- 
 		<a href="Filter.html">
 			<img src="images/navMenu/icon_filter.png" alt="home">		</a>
 		<a href="Filter.html" class="menuLink">		Filter				</a>
-		 -->
-		<a href="Score.html">
-			<img src="images/navMenu/icon_trophy.png" alt="home">		</a>
-		<a href="Score.html" class="menuLink">		Score				</a>
-		
-		<a href="Map.html">
-			<img src="images/navMenu/icon_map.png" alt="home">			</a>
-		<a href="Map.html" class="menuLink">			Map				</a>
-		
-		<a href="Credits.html">
-			<img src="images/navMenu/icon_home.png" alt="home">			</a>
-		<a href="Credits.html" class="menuLink">		Credits			</a>
-	</div> <!-- menu -->
+		 --> 
+    <a href="Score.html"> <img src="http://www.flywithbutchohare.com/images/navMenu/icon_trophy.png" alt="home"> </a> <a href="Score.html" class="menuLink"> Score </a> <a href="Map.html"> <img src="http://www.flywithbutchohare.com/images/navMenu/icon_map.png" alt="home"> </a> <a href="Map.html" class="menuLink"> Map </a> <a href="Credits.html"> <img src="http://www.flywithbutchohare.com/images/navMenu/icon_home.png" alt="home"> </a> <a href="Credits.html" class="menuLink"> Credits </a> </div>
+      <!-- menu -->  </div>     <!--          Closed Sidear   MLP      -->
+          <!--         Header        -->
+     
+<div id="logo-header"><img src="images/fwb_header.jpg" alt="Fly with Butch O'Hare" width="900" height="295" /></div>
 
 
-	
-	<!--          Container         -->
-	<div class="container-wrap">
-	<div class="container">
-		<!--         Header        -->
-		<div id="header">
-			<h1>Airport Trivia</h1>
-		</div> <!-- header -->
-
-		
-		<!--         Content       -->
-		<!--<div id="content">
+          
+          <!--         Content       --> 
+          <!--<div id="content">
 		
 			<div id= 'quiz'>
 				<input type='button' class='button' value='Next' id='next'><a href='#'></a></div> 
@@ -181,7 +162,4 @@
 </div> <!-- container -->
 </div> <!-- container-wrap -->
 </body>
-
-	
-
 </html>
