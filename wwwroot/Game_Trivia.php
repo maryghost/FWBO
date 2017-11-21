@@ -96,6 +96,8 @@
 		</div>-->
 		
 		<div id="content">
+		<div id="page_content"><div class="message">
+        <h1>Airport Trivia</h1>
 			<?php
 				if (!isset($explain))
 					include('scripts/triviascriptsproject/TriviaSelect.php'); 
@@ -140,6 +142,9 @@
 				}
 			?>
 		</form>
+	</div> <!-- message -->
+        </div>  <!-- page content MLP, closed--> 
+
 		</div> <!-- content -->
 
 		<!--         Footer       -->
@@ -158,8 +163,6 @@
 					<img src="images/social/share_pinterest.png"></a>
 			</div> <!-- social -->
 		</div> <!-- footer -->
-	</div> <!-- social -->
 </div> <!-- container -->
-</div> <!-- container-wrap -->
 </body>
 </html>
