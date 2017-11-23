@@ -149,8 +149,8 @@
 
 		<!--         Footer       -->
 		<div id="footer">
-			<a id="cda_logo" href="http://www.flychicago.com">
-				<img src="images/social/cda_logo.png"></a>
+			<!--<a id="cda_logo" href="http://www.flychicago.com">
+				<img src="images/social/cda_logo.png"></a>-->
 			<div class="social">
 				<img src="images/social/share_hashtag.png"><br>
 				<a href="https://twitter.com/fly2ohare" target="_blank">

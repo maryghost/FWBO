@@ -39,10 +39,9 @@
 </head>
 
 <body>
-<div>
-	<a id="loginBtn" href="../../Login.html"> Log in </a>
-	
-	<!----------     Navigation Bar      ---------->
+
+
+		<!----------     Navigation Bar      ---------->
 	<a id="showBtn" class="menuToggle" href="#">Show</a>
 	<div id="menu" class="main-nav">
 		<a id="hideBtn" class="menuToggle" href="#menu">	Collapse	</a>
@@ -77,10 +76,9 @@
 	<div class="container-wrap">
 	<div class="container">
 		<!----------         Header        ---------->
-		<div id="header">
-			<h1>Airport Trivia</h1>
-		</div>
-		<div id="content">
+<div id="content">
+		<div id="page_content"><div class="message">
+        <h1>Airport Trivia</h1>		<div id="content">
 		<form method = 'post' action = '../../Game_Trivia.php' id= 'quiz' name='frmQuiz' >
 			<?php
 				if (isset($_SESSION['explain']))
@@ -92,8 +90,8 @@
 
 		<!----------         Footer       ----------->
 		<div id="footer">
-			<a id="cda_logo" href="http://www.flychicago.com">
-				<img src="images/social/cda_logo.png"></a>
+			<!--<a id="cda_logo" href="http://www.flychicago.com">
+				<img src="images/social/cda_logo.png"></a>-->
 			<div class="social">
 				<img src="images/social/share_hashtag.png"><br>
 				<a href="https://twitter.com/fly2ohare" target="_blank">
