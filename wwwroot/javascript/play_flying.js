@@ -138,15 +138,15 @@ function gameStart()
 		this.imgRight = new Image();
 		this.imgRight.src = "images/play_flying/arrow-right.png";
 
+		var size = 800 / 8;
+		var center = 800 / 2;
+		var spacing = 800 / 4;
+		var y = 480 - size - 10;
+		var leftX = center-spacing-size/2;
+		var rightX = center+spacing-size/2;
+
 		this.draw = function()
 		{
-			var size = 800 / 8;
-			var center = 800 / 2;
-			var spacing = 800 / 4;
-			var y = 480 - size - 10;
-			var leftX = center-spacing-size/2;
-			var rightX = center+spacing-size/2;
-
 			context.drawImage(this.imgLeft, leftX, y, size, size);
 			context.drawImage(this.imgRight, rightX, y, size, size);
 		}
