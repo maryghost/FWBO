@@ -342,33 +342,31 @@ function gameStart()
 		
 		this.update = function()
 		{
+            var adjust = 0.5;
 
-			var adjust = 0.5;
+            this.y += this.ySpeed;
+            this.x += this.xSpeed;
+            this.ySpeed *= 1 + (0.05 * adjust);  // xSpeed, ySpeed, and scale can be adjusted to slow the approach speed.
+            this.scale += 0.010 * adjust;
+            if (this.y > canvas.height + this.getHeight() / 2 ||
+                this.x < 0 ||
+                this.x > canvas.width) {
+                if (Math.abs(this.x - player.x) < 100) {
+                    player.score++;
+                    setDebugText("Score: " + player.score);
+                    document.getElementById("score").innerHTML = player.score;
+                }
+                this.y = 150;
+                this.ySpeed = 5;
+                this.scale = 0.01;
+                this.x = (canvas.width / 2 - 150) + Math.random() * 300;
+                this.xSpeed = (this.x - canvas.width / 2) * 0.19;
+                stores.chooseStore(this);
+                stores.sort();
+            }
+        }
+    }
 
-			this.y += this.ySpeed;
-			this.x += this.xSpeed;
-			this.ySpeed *= 1 + (0.08 * adjust);  // xSpeed, ySpeed, and scale can be adjusted to slow the approach speed.
-			this.scale += 0.016 * adjust;
-			if (this.y > canvas.height + this.getHeight()/2 ||
-				this.x < 0 || 
-				this.x > canvas.width)
-			{
-				if (Math.abs(this.x - player.x) < 100)
-				{
-					player.score++;
-					setDebugText("Score: " + player.score);
-					document.getElementById("score").innerHTML = player.score;
-				}
-				this.y = 180;
-				this.ySpeed = 8;
-				this.scale = 0.01;
-				this.x = (canvas.width/2 - 150) + Math.random() * 300;
-				this.xSpeed = (this.x - canvas.width/2) * 0.19;
-				stores.chooseStore(this);
-				stores.sort();
-			}				
-		}
-	}
 
 
 	function Player()
