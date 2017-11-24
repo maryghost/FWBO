@@ -66,7 +66,7 @@ function gameStart()
 	// Player Constants
 	var ACTION_MOVE = "MOVE";
 	var ACTION_IDLE = "IDLE";
-	var MAX_SPEED = 30;
+	var MAX_SPEED = 10;
 	var ACCELERATION = 1;
 	var DIRECTION_LEFT = -1;
 	var DIRECTION_RIGHT = 1;
