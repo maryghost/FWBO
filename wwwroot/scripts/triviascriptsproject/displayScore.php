@@ -80,10 +80,10 @@
 			<!----------       Page Content      ---------->
 			<div id="page_content">
 				<div class="message">
-<h1>Airport Trivia</h1>
 		<!-- ANSWER CONTENT HERE --> 
 
 		<!----------     Navigation Bar      ---------->
+		<!--
 	<a id="showBtn" class="menuToggle" href="#">Show</a>
 	<div id="menu" class="main-nav">
 		<a id="hideBtn" class="menuToggle" href="#menu">	Collapse	</a>
@@ -95,11 +95,6 @@
 		<a href="Play.html">
 			<img src="../../images/navMenu/icon_game.png" alt="Play">			</a>
 		<a href="Play.html" class="menuLink">		Play				</a>
-		<!-- 
-		<a href="Filter.html">
-			<img src="images/navMenu/icon_filter.png" alt="home">		</a>
-		<a href="Filter.html" class="menuLink">		Filter				</a>
-		 -->
 		<a href="Score.html">
 			<img src="../../images/navMenu/icon_trophy.png" alt="home">		</a>
 		<a href="Score.html" class="menuLink">		Score				</a>
@@ -112,7 +107,7 @@
 			<img src="../../images/navMenu/icon_home.png" alt="home">			</a>
 		<a href="Credits.html" class="menuLink">		Credits			</a>
 	</div>
-
+-->
 	
 	<!----------          Container         ---------->
 	<div class="container-wrap">
