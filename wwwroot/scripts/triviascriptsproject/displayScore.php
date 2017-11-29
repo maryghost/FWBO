@@ -28,6 +28,7 @@
 ?>
 <html>
 
+<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="http://www.flywithbutchohare.com/css/layout.css"  type="text/css" charset="utf-8">
 	<link rel="stylesheet" href="http://www.flywithbutchohare.com/css/fonts.css" type="text/css" charset="utf-8">
@@ -83,40 +84,6 @@
 				<h1>Airport Trivia</h1>
 		<!-- ANSWER CONTENT HERE --> 
 
-		<!----------     Navigation Bar      ---------->
-		<!--
-	<a id="showBtn" class="menuToggle" href="#">Show</a>
-	<div id="menu" class="main-nav">
-		<a id="hideBtn" class="menuToggle" href="#menu">	Collapse	</a>
-		
-		<a href="Index.html">
-			<img src="../../images/navMenu/icon_home.png" alt="Home">			</a>
-		<a href="Index.html" class="menuLink">		Home				</a>
-		
-		<a href="Play.html">
-			<img src="../../images/navMenu/icon_game.png" alt="Play">			</a>
-		<a href="Play.html" class="menuLink">		Play				</a>
-		<a href="Score.html">
-			<img src="../../images/navMenu/icon_trophy.png" alt="home">		</a>
-		<a href="Score.html" class="menuLink">		Score				</a>
-		
-		<a href="Map.html">
-			<img src="../../images/navMenu/icon_map.png" alt="home">			</a>
-		<a href="Map.html" class="menuLink">			Map				</a>
-		
-		<a href="Credits.html">
-			<img src="../../images/navMenu/icon_home.png" alt="home">			</a>
-		<a href="Credits.html" class="menuLink">		Credits			</a>
-	</div>
--->
-	
-	<!----------          Container         ---------->
-	<!--<div class="container-wrap">-->
-	<div class="container">
-		<!----------         Header        ---------->
-<div id="content">
-		<div id="page_content"><div class="message">
-        <div id="content">
 		<form method = 'post' action = '../../Game_Trivia.php' id= 'quiz' name='frmQuiz' >
 			<?php
 				if (isset($_SESSION['explain']))
@@ -166,6 +133,7 @@
 			<div style="clear:both;"></div>
 		</div>
 	</div>
+</div>
 </body>
 	<script>
 		printPlay();
