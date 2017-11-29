@@ -80,6 +80,7 @@
 			<!----------       Page Content      ---------->
 			<div id="page_content">
 				<div class="message">
+				<h1>Airport Trivia</h1>
 		<!-- ANSWER CONTENT HERE --> 
 
 		<!----------     Navigation Bar      ---------->
@@ -110,12 +111,12 @@
 -->
 	
 	<!----------          Container         ---------->
-	<div class="container-wrap">
+	<!--<div class="container-wrap">-->
 	<div class="container">
 		<!----------         Header        ---------->
 <div id="content">
 		<div id="page_content"><div class="message">
-        <h1>Airport Trivia</h1>		<div id="content">
+        <div id="content">
 		<form method = 'post' action = '../../Game_Trivia.php' id= 'quiz' name='frmQuiz' >
 			<?php
 				if (isset($_SESSION['explain']))
@@ -165,7 +166,6 @@
 			<div style="clear:both;"></div>
 		</div>
 	</div>
-</div>
 </body>
 	<script>
 		printPlay();
