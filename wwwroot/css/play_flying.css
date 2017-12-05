@@ -51,12 +51,13 @@
  
  #hud {
 	float:right;
-	font-size: 18px;
+	font-size: 24px;
 	background-color: #ef4822;
 	border: 3px solid black;
 	border-radius: 10px 10px 10px 10px;
 	padding: 5px;
 	margin-top: 60px;
+	margin-right: 60px;
  }
  
  #hud2 {
