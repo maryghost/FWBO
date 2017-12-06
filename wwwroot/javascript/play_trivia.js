@@ -23,7 +23,7 @@ $(function () {
             correctAnswer: 3
         }, {
             question: "Who created the cloud gate Sculpture?",
-            choices: ["A. Indian-born British artist Sir Anish Kapoor",
+            choices: ["A. Anish Kapoor",
 		      "B. ARMINE AGHAYAN",
                       "C. Jimmy Wales",
                       "D. Zelalem Gebre"],
