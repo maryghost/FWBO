@@ -289,7 +289,10 @@ function gameStart()
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_GetawaySpa_T1_B12.png";
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_GetawaySpa_T3_H1.png";
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_GetawaySpa_T3_H6.png";
+<<<<<<< HEAD
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_HeadphoneHub_T2_MainHall.png";
+=======
+>>>>>>> 45f207bdaf3397298032a28ec6884c0e76d47e1f
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hoypoloi_T1_B6.png";
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hoypoloi_T2_E5.png";
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_B10.png";
@@ -329,6 +332,11 @@ function gameStart()
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_Talie_T3_H1.png";
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_Vosges_T1_B6.png";
 			this.storeFiles[i++] = PATH_SHOP + "SHOP_Vosges_T3_H4.png";
+<<<<<<< HEAD
+=======
+			
+			// TODO: Finish loading storefronts.
+>>>>>>> 45f207bdaf3397298032a28ec6884c0e76d47e1f
 			
 			for (var i = 0; i < this.storeFiles.length; i++)
 			{
