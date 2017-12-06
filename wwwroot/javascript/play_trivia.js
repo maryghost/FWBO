@@ -10,16 +10,16 @@ $(function () {
         }, {
             question: "O'Hare store: Johnston & Murphy has been custom designing shoes for every US President since 1850. Who was the President in 1850?",
             choices: ["A. James Buchanan",
-				      "B. Franklin Pierce",
+		      "B. Franklin Pierce",
                       "C. Millard Fillmore",
-				      "D. Zachary Taylor"],
+		      "D. Zachary Taylor"],
             correctAnswer: 2
         }, {
             question: "Which US President wore the largest Johnston & Murphy shoe (so far)?",
             choices: ["A. Barack Obama",
-				      "B. George Washington",
+		      "B. George Washington",
                       "C. Richard Nixon",
-				      "D. Abraham Lincoln"],
+		      "D. Abraham Lincoln"],
             correctAnswer: 3
         }, {
             question: "Who created the cloud gate Sculpture?",
@@ -47,7 +47,7 @@ $(function () {
 		
             question: "What is the difference between Deep Tissue and Swedish Massage?",
             choices: ["A. Deep Tissue massage is performed in deep waters off the Mediterranean Sea.",
-				      "B. Swedish Massage can only be performed by people born in Sweden.",
+		      "B. Swedish Massage can only be performed by people born in Sweden.",
                       "C. Deep tissue is firm and more therapeutic, while Swedish is lighter and more relaxing. Both are available at O'Hare."],
             correctAnswer: 2
         }, {
