@@ -1,11 +1,3 @@
-<?php
-	$score = $_GET["score"];
-	echo "<script language='JavaScript'>";
-	echo "document.getElementById('score').innerHTML = 'Your score: " . $score ."';";
-	echo "</script>";	
-?>
-
-
 <!doctype html>
 <html>
 <head>
@@ -25,7 +17,7 @@
 <body><div style="background-color:#24b3ce; padding:20px;">  <div style="text-align: center;	padding: 30px 0px; border:2px solid #ffffff;"><img src="images/butch-sideviewairplane.png" width="700" height="394" alt=""/>
   <h2 style="font-family: 'Roboto Condensed', sans-serif; 	font-size: 180%; 	font-weight: 700;	color: #ffffff;	text-transform: uppercase;
 	text-align: center;">GREAT JOB!    THANKS FOR PLAYING THE AIRPORT FLYING GAME.</h2>
-<div id="score"></div>
+<div id="score">Your score: <?php echo $_GET["score"]; ?></div>
 	<div style="background-color:#ef4323; padding:20px;">
   <h2 style="font-family: 'Roboto Condensed', sans-serif; 	font-size: 120%; 	font-weight: 700;	color: #ffffff;	text-transform: uppercase;
 	text-align: center;">    TAKE ADVANTAGE OF  DISCOUNTS FROM THE SHOPS OF O’HARE.<br>

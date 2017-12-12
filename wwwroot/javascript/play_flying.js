@@ -20,6 +20,7 @@ $(document).ready(function(){
 						$("#gameTitle").show();
 						window.clearTimeout(timeOut);
 						window.location.assign("game_end.html");
+						//window.location.assign("game_end.php?score=" + player.score);
 						/*
 						$("#startButton").text("Play Again!");
 						$("#startButton").show();
