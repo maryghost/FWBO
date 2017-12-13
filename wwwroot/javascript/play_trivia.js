@@ -10,47 +10,70 @@ $(function () {
         }, {
             question: "O'Hare store: Johnston & Murphy has been custom designing shoes for every US President since 1850. Who was the President in 1850?",
             choices: ["A. James Buchanan",
-				      "B. Franklin Pierce",
+		      "B. Franklin Pierce",
                       "C. Millard Fillmore",
-				      "D. Zachary Taylor"],
+		      "D. Zachary Taylor"],
             correctAnswer: 2
         }, {
             question: "Which US President wore the largest Johnston & Murphy shoe (so far)?",
             choices: ["A. Barack Obama",
-				      "B. George Washington",
+		      "B. George Washington",
                       "C. Richard Nixon",
-				      "D. Abraham Lincoln"],
+		      "D. Abraham Lincoln"],
             correctAnswer: 3
         }, {
+            question: "Who created the cloud gate Sculpture?",
+            choices: ["A. Anish Kapoor",
+		      "B. ARMINE AGHAYAN",
+                      "C. Jimmy Wales",
+                      "D. Zelalem Gebre"],
+            correctAnswer: 1
+        }, { 
+		question: "who founded chicago?",
+			choices: ["A. Abraham Lincoln",
+				  "B. Jean-Baptist-Point Du Sable",
+				  "C. John Wilkes Booth",
+			          "D. Mary Todd Lincoln"],
+		correctAnswer: 2
+					  
+	}, {
+			 question: "Who was the 16th President of the United States?",
+            choices: ["A. Robert E. Lee",
+		      "B. Barak Obama",
+                      "C. Andrew Johnson",
+                      "D. Abraham Lincoln"],
+            correctAnswer: 4
+        }, {
+		
             question: "What is the difference between Deep Tissue and Swedish Massage?",
             choices: ["A. Deep Tissue massage is performed in deep waters off the Mediterranean Sea.",
-				      "B. Swedish Massage can only be performed by people born in Sweden.",
+		      "B. Swedish Massage can only be performed by people born in Sweden.",
                       "C. Deep tissue is firm and more therapeutic, while Swedish is lighter and more relaxing. Both are available at O'Hare."],
             correctAnswer: 2
         }, {
             question: "In what year was prohibition in the US repealed?",
             choices: ["A. 1932 - (Amelia Earhart lands in Ireland in the first transatlantic solo flight by a woman)",
-				      "B. 1933 - (1st Flight of all-metal Boeing 247)",
+		      "B. 1933 - (1st Flight of all-metal Boeing 247)",
                       "C. 1942 - (Edward 'Butch' O'Hare receives the Medal of Honor from President Franklin D. Roosevelt)",
                       "D. 1963 - ( President Kennedy dedicates O'Hare International Airport in honor of Edward 'Butch'' O'Hare)"],
             correctAnswer: 1
         }, {
             question: "Which animal can you find roaming around O'Hare property?",
             choices: ["A. Cow",
-				      "B. Ostrich",
+		      "B. Ostrich",
                       "C. Goats",
                       "D. Giraffes"],
             correctAnswer: 2
         }, {
             question: "What word is derived from the Arabic word “qandi” and means made of sugar?",
             choices: ["A. Soda Pop",
-				      "B. Candy",
+		      "B. Candy",
                       "C. Chocolate"],
             correctAnswer: 1
         }, {
             question: "It’s summer time and I forgot my sunglasses. I should go to:",
             choices: ["A. Oakley",
-				      "B. Hudson News & Gifts stores and CNN Stores",
+	              "B. Hudson News & Gifts stores and CNN Stores",
                       "C. Jenny''s Cool Spectacles",
                       "D. Sunglass Hut",
                       "E. A, B, and D only"],
@@ -58,13 +81,13 @@ $(function () {
         }, {
             question: "O'Hare is home to bees, goats and a dinosaur.",
             choices: ["A. True",
-				      "B. False",
+		      "B. False",
                      ],
             correctAnswer: 0
         }, {
             question: "Plants can grow without soil at O'Hare.",
             choices: ["A. True",
-				      "B. False",
+		      "B. False",
                      ],
             correctAnswer: 0
         }

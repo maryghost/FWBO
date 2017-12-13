@@ -106,6 +106,9 @@ p {
 	line-height: 150%;
 	color: #11517a;
 }
+.names p{
+	margin: 0;
+}
 ul {
 	color: #11517a;
 	font-size: 90%;
