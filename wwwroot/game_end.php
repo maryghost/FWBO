@@ -8,7 +8,7 @@
 	var sec = 60000;
 	setTimeout( function () {
 	window.location.href = "index.html";}, sec );
-	}-\-7
+	}
 </script>
 <meta charset="utf-8">
 <title>Thanks for playing!</title>
@@ -17,7 +17,8 @@
 <body><div style="background-color:#24b3ce; padding:20px;">  <div style="text-align: center;	padding: 30px 0px; border:2px solid #ffffff;"><img src="images/butch-sideviewairplane.png" width="700" height="394" alt=""/>
   <h2 style="font-family: 'Roboto Condensed', sans-serif; 	font-size: 180%; 	font-weight: 700;	color: #ffffff;	text-transform: uppercase;
 	text-align: center;">GREAT JOB!    THANKS FOR PLAYING THE AIRPORT FLYING GAME.</h2>
-<div id="score">Your score: <?php echo $_GET["score"]; ?></div>
+<h2 style="font-family: 'Roboto Condensed', sans-serif; 	font-size: 160%; 	font-weight: 700;	color: #ffffff;	text-transform: uppercase;
+	text-align: center;">Your score: <?php echo $_GET["score"]; ?></h2>
 	<div style="background-color:#ef4323; padding:20px;">
   <h2 style="font-family: 'Roboto Condensed', sans-serif; 	font-size: 120%; 	font-weight: 700;	color: #ffffff;	text-transform: uppercase;
 	text-align: center;">    TAKE ADVANTAGE OF  DISCOUNTS FROM THE SHOPS OF O’HARE.<br>

@@ -19,8 +19,9 @@ $(document).ready(function(){
 						$("#gameTitle").text("Game over!");
 						$("#gameTitle").show();
 						window.clearTimeout(timeOut);
-						window.location.assign("game_end.html");
-						//window.location.assign("game_end.php?score=" + player.score);
+						//window.location.assign("game_end.html");
+						var gameOverPage = "game_end.php?score=" + score;
+						window.location.assign(gameOverPage);
 						/*
 						$("#startButton").text("Play Again!");
 						$("#startButton").show();
@@ -52,6 +53,7 @@ $(document).ready(function(){
 // Extra Variables for Features
 var timeOut;
 var gamePlaying = true;
+var score = 0;
 
 
 //gameStart() runs when the startButton is pressed
@@ -399,9 +401,9 @@ function gameStart()
 			{
 				if (Math.abs(this.x - player.x) < 100)
 				{
-					player.score++;
-					setDebugText("Score: " + player.score);
-					document.getElementById("score").innerHTML = player.score;
+					score++;
+					setDebugText("Score: " + score);
+					document.getElementById("score").innerHTML = score;
 				}
 				this.y = 180;
 				this.ySpeed = 8;
@@ -423,7 +425,7 @@ function gameStart()
 		this.direction = 0;
 		var width = 1479/5.5; // TODO: Request proper image size.
 		var height = 1105/5.5;
-		this.score = 0;
+		//this.score = 0;
 		this.speed = 0;
 		var imgPlane = new Image();
 		imgPlane.src = "images/play_flying/butchairplane_rear.png";
