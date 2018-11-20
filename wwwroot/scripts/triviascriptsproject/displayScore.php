@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><?php
 	session_start();
 	
+	
 	if (isset($_POST['submitAnswer']))
 	{
 		if (isset($_SESSION['numCorrect']))
@@ -9,12 +10,17 @@
 		else
 			$_SESSION['numCorrect'] = $_POST['scoreIncrement'];
 		
-		$_SESSION['explain'] = "<p>The correct answer is <br />" . $_SESSION['questionExplanation'] .
-			       "</p><p>You have answered " . $_SESSION['numCorrect'] . " questions correctly.</p>";
-				   
+
+		$_SESSION['explain'] = "Q: ".$_SESSION['questionText']. 
+							"<p>The correct answer is <br />" . $_SESSION['questionExplanation']."</p>
+							
+						   <p>You have answered " . $_SESSION['numCorrect'] . " questions correctly.<br />
+							Explanation: ". $_SESSION['Explanation'] ."</p>";
+		   
 		$_SESSION['question']++;
-		
+				
 		header("Location:displayScore.php");
+		//header("Location:play_triviaORIGINAL.js");
 	}
 	else if (isset($_POST['reset']))
 	{
@@ -29,6 +35,15 @@
 <html>
 
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118827552-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118827552-1');
+</script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="http://www.flywithbutchohare.com/css/layout.css"  type="text/css" charset="utf-8">
 	<link rel="stylesheet" href="http://www.flywithbutchohare.com/css/fonts.css" type="text/css" charset="utf-8">
@@ -38,40 +53,8 @@
 <body class="body">
 <div style="width:100%;margin:0 auto;">
 	<div class="container">
-		<!------------------ Sidebar ------------------->
-		<div class="sidebar">
-			<div class="menu">
-				<a href="http://www.flywithbutchohare.com/Index.html">
-				<img src="http://www.flywithbutchohare.com/images/navMenu/icon_game.png" alt="Play">			</a><br>
-				<span class="menu_text">
-					<a href="http://www.flywithbutchohare.com/Index.html">PLAY</a>
-				</span>
-			</div>
-			<div class="menu">
-				<a href="http://www.flywithbutchohare.com/Score.html">
-				<img src="http://www.flywithbutchohare.com/images/navMenu/icon_trophy.png" alt="Score">			</a><br>
-				<span class="menu_text">
-					<a href="http://www.flywithbutchohare.com/Score.html">SCORE</a>
-				</span>
-			</div>
-			<div class="menu">
-				<a href="http://www.flywithbutchohare.com/Map.html">
-				<img src="http://www.flywithbutchohare.com/images/navMenu/icon_map.png" alt="Map">			</a><br>
-				<span class="menu_text">
-					<a href="http://www.flywithbutchohare.com/Map.html">MAP</a>
-				</span>
-			</div>
-			<div class="menu">
-				<a href="http://www.flywithbutchohare.com/Credits.html">
-				<img src="http://www.flywithbutchohare.com/images/navMenu/icon_credits.png" alt="Credits">			</a><br>
-				<span class="menu_text">
-					<a href="http://www.flywithbutchohare.com/Credits.html">CREDITS</a>
-				</span>
-			</div>
-			<br>
-			<br>
-		</div>
-			
+		<!------------------ Sidebar REMOVED by GSS 6-18-18------------------->
+		
 		<!----------         Content       ---------->
 		<div id="content">
 			<div id="logo-header">
@@ -96,43 +79,16 @@
 		</div>
 			</div>
 			
-			<!------------------ Social Media ------------------->
-			<div id="social-media">
-				<div class="social_left">
-					<a href="http://www.flychicago.com/">
-						<img src="http://www.flywithbutchohare.com/images/social/cda_logo.png"></a>
-				</div>
-				<div class="social_right">
-					<img src="http://www.flywithbutchohare.com/images/social/share_hashtag.png"><br>
-					<a href="https://twitter.com/fly2ohare" target="_blank">
-					<img src="http://www.flywithbutchohare.com/images/social/share_twitter.png"></a>
-				<a href="https://www.instagram.com/flyohare/" target="_blank">
-					<img src="http://www.flywithbutchohare.com/images/social/share_instagram.png"></a>
-				<a href="https://www.facebook.com/fly2ohare/" target="_blank">
-					<img src="http://www.flywithbutchohare.com/images/social/share_facebook.png"></a>
-				<a href="https://www.pinterest.com/flychicago/" target="_blank">
-					<img src="http://www.flywithbutchohare.com/images/social/share_pinterest.png"></a>
-				</div>
-				<div style="clear:both;"></div>
-			</div>
+			<!------------------ Social Media REMOVED by GSS 6-18-18------------------->
+			
 		</div>
 		
 		<div style="clear:both;"></div>
 		
 	</div>
 	
-	<!------------------ Footer ------------------->
-	<div id="footer-container">
-		<div id="footer-content">
-			<div id="footer-left">
-				<a href="http://www.flychicago.com/">FlyChicago.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="https://www.devry.edu/" target="_blank">DeVry University</a>
-			</div>
-			<div id="footer-center">Developed by Unison Retail Management</div>
-			<div id="footer-right"><a href="http://www.flychicago.com/FlywithButchOHare/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="copyright"> © 2017</span></div>
-			<div style="clear:both;"></div>
-		</div>
-	</div>
+	<!------------------ Footer REMOVED by GSS 6-18-18------------------->
+	
 </div>
 </body>
 	<script>

@@ -7,6 +7,8 @@ $(function () {
 				       "D. Chalupa, dogler, hamster, croonley, frankfurt",
 				     ],
             correctAnswer: 3
+						Explanation: "blah blah"
+
         }, {
             question: "O'Hare store: Johnston & Murphy has been custom designing shoes for every US President since 1850. Who was the President in 1850?",
             choices: ["A. James Buchanan",
@@ -14,12 +16,16 @@ $(function () {
                       "C. Millard Fillmore",
 				      "D. Zachary Taylor"],
             correctAnswer: 2
+						Explanation: "blah blah"
+
         }, {
             question: "Which US President wore the largest Johnston & Murphy shoe (so far)?",
             choices: ["A. Barack Obama",
 				      "B. George Washington",
                       "C. Richard Nixon",
 				      "D. Abraham Lincoln"],
+					  			Explanation: "blah blah"
+
             correctAnswer: 3
         }, {
             question: "What is the difference between Deep Tissue and Swedish Massage?",
@@ -27,6 +33,8 @@ $(function () {
 				      "B. Swedish Massage can only be performed by people born in Sweden.",
                       "C. Deep tissue is firm and more therapeutic, while Swedish is lighter and more relaxing. Both are available at O'Hare."],
             correctAnswer: 2
+						Explanation: "blah blah"
+
         }, {
             question: "In what year was prohibition in the US repealed?",
             choices: ["A. 1932 - (Amelia Earhart lands in Ireland in the first transatlantic solo flight by a woman)",
@@ -34,6 +42,8 @@ $(function () {
                       "C. 1942 - (Edward 'Butch' O'Hare receives the Medal of Honor from President Franklin D. Roosevelt)",
                       "D. 1963 - ( President Kennedy dedicates O'Hare International Airport in honor of Edward 'Butch'' O'Hare)"],
             correctAnswer: 1
+						Explanation: "blah blah"
+
         }, {
             question: "Which animal can you find roaming around O'Hare property?",
             choices: ["A. Cow",
@@ -41,12 +51,15 @@ $(function () {
                       "C. Goats",
                       "D. Giraffes"],
             correctAnswer: 2
+						Explanation: "blah blah"
+
         }, {
             question: "What word is derived from the Arabic word “qandi” and means made of sugar?",
             choices: ["A. Soda Pop",
 				      "B. Candy",
                       "C. Chocolate"],
             correctAnswer: 1
+			Explanation: "blah blah"
         }, {
             question: "It’s summer time and I forgot my sunglasses. I should go to:",
             choices: ["A. Oakley",
@@ -55,23 +68,29 @@ $(function () {
                       "D. Sunglass Hut",
                       "E. A, B, and D only"],
             correctAnswer: 4
+						Explanation: "blah blah"
+
         }, {
             question: "O'Hare is home to bees, goats and a dinosaur.",
             choices: ["A. True",
 				      "B. False",
                      ],
             correctAnswer: 0
+						Explanation: "blah blah"
+
         }, {
             question: "Plants can grow without soil at O'Hare.",
             choices: ["A. True",
 				      "B. False",
                      ],
             correctAnswer: 0
+						Explanation: "blah blah"
+
         }
         ];
     
     
-  
+    var Explanation = []
     var questionCounter = 0; //Tracks question number
     var selections = []; //Array containing user choices
     var quiz = $('#quiz'); //Quiz div object

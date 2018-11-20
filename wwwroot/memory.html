@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118827552-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118827552-1');
+</script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fly with Butch O'Hare: Memory Game</title>
+<link href="css/fwb2018.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+<link rel="stylesheet" href="css/style.prefix.css">
+<link rel="icon" type="img/png" href="img/Match_.jpg">
+</head>
+<body style=margin-top:0px;">
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Content -->
+  
+  <div class="memory">
+    <div id="memorytitle"><img src="images/memory-game_title.png"></div>
+	<div id="score" style="color: white"></div>
+	<div id="time" style="color: white"></div>
+    <div style="background-color:#012337;">
+    <div id="memory-left">
+      <p><strong>HOW TO PLAY:</strong></p>
+      <p>The goal of this  game is to match two store logos with each other. </p>
+      <p>Playing is very simple. Touch a card to flip it over and then try to find the matching store logo.</p>
+      <p>The game is over when all the store logos have been matched. 
+</p>
+      
+      </p>
+    </div>
+    <div id="memory-right"> 
+      <!-- Game Script --> 
+      <div id="game">
+      </div>
+      <script src="js/script.babel.js"></script>
+      <!-- End of Game Script --> 
+    </div>
+    <div style="clear:both;"></div></div>
+  </div>
+  <div id="back"> <a href="index.html"><img src="images/back_btn.png" alt="Back Button"></a></div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>

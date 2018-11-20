@@ -4,6 +4,8 @@ $(document).ready(function(){
     $("#startButton").click(function(){
         var sec = 60;
 
+
+
         setInterval(function() {
 			if(gamePlaying) {
 				document.getElementById("timer").innerHTML = sec;
@@ -25,6 +27,7 @@ $(document).ready(function(){
 						/*
 						$("#startButton").text("Play Again!");
 						$("#startButton").show();
+						
 						*/
 
 						/*
@@ -61,6 +64,7 @@ function gameStart()
 {
 	//Hides background image after starting game
 	document.getElementById("splashScreen").style.backgroundImage = "none";
+	
 
 	// Keyboard Constants (separate file?)
 	var KEY_ARROW_LEFT = "37";
@@ -140,18 +144,24 @@ function gameStart()
 		
 		this.imgRight = new Image();
 		this.imgRight.src = "images/play_flying/arrow-right.png";
+		
+		this.imgback = new Image();
+		this.imgback.src = "images/play_flying/back-button.png";
 
 		var size = 800 / 10;
 		var center = 800 / 2;
 		var spacing = 800 / 4;
 		var y = 480 - size - 10;
+		var x = 40;
 		var leftX = center-spacing-size/2;
 		var rightX = center+spacing-size/2;
+		var upperleftY = 40;
 
 		this.draw = function()
 		{
 			context.drawImage(this.imgLeft, leftX, y, size, size);
 			context.drawImage(this.imgRight, rightX, y, size, size);
+			context.drawImage(this.imgback, x, upperleftY, size, size);
 		}
 	}
 	
@@ -237,101 +247,92 @@ function gameStart()
 		{
 			// TODO: Automate the population of the storefront images.
 			var i = 0;
-			this.storeFiles[i++] = PATH_EAT + "EAT_AmericasDog_T1_C17.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_ArgoTea_T2_E5.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_ArgoTea_T3_H1.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_ArgoTea_T3_L2A.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_AuntieAnnes_T1_C18.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_AuntieAnnes_T2_E4.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_Berghoff_T1_C26.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_B-Smooth_T3_K4.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_BurritoBeach_T3_K4.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_CIBO_T2_MainHall.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_CIBO_T3_H1.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_DunkinDonuts_T3_H5.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_FreshMarketontheGo_T1_C23.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_GarrettPopcorn_T1_B8.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_GarrettPopcorn_T3_H2.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_GoldCoastDogs_T3_L4.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_GreenMarket_T3_L3.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_ICE_T3_L1.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_JambaJuice_T1_B7.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_LaTapenade_T1_B4.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_LaTapenade_T3_H14.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_NutsonClark_T1_C19.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_NutsonClark_T2_E4.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_NutsonClark_T3_H8.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_Obriens_T3_H5.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_RockyMountainChocolateFactory_T1_B14.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_RockyMountainChocolateFactory_T3_H5.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_SmoothieKing-TheGrove_T1_B6.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_StanleysBlackhawks_T2_E5.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_Subway_T3_Rotunda.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_Tuscany_T1_B18.png";
-			this.storeFiles[i++] = PATH_EAT + "EAT_WolfgangExpress_T3_K12.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Barbaras_T1_B10.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Barbaras_T1_C15.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Barbaras_T2_E5.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Barbaras_T3_G1B.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Barbaras_T3_H4.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Brighton_T3_H3.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Brooks-Brothers_T3_H3.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Brookstone_T1_C11.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Brookstone_T3_H3.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_CNN_T1_B9.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_CNN_T3_H5.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Coach_T2_MainHall.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_DutyFreeStore_T1_B9.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_DutyFreeStore_T1_C17.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_DutyFreeStore_T2_F5.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_DutyFreeStore_T3_K5.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_ErwinPearl_T1_B6.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_ErwinPearl_T3_H6.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_FieldMuseumStore_T1_B8.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_FieldMuseumStore_T3_K1.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_GetawaySpa_T1_B12.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_GetawaySpa_T3_H1.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_GetawaySpa_T3_H6.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_HeadphoneHub_T2_MainHall.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hoypoloi_T1_B6.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hoypoloi_T2_E5.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_B10.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_B14.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_B18.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_B20.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_B4.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_BaggageLL.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_C18.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_C21.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_C22.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_C23.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T1_C9.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T2_BaggageLL.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T2_E10.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T2_E6.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T2_F28.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T2_F4.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T3_BaggageLL.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T3_G19.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T3_G2B.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T3_H11B.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T3_K1.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T3_K13.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T3_K5.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T3_L1.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Hudson_T3_L8.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_In-Motion_T1_B7.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_In-Motion_T3_H2.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_In-Motion_T3_K12.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_JohnstonMurphy_T1_B6.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_MAC_T2_MainHall.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Oakley_T1_B8.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Oakley_T3_H1.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Sarahs_T2_F9.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_SpiritRedHorse_T1_C21.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Talie_T3_H1.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Vosges_T1_B6.png";
-			this.storeFiles[i++] = PATH_SHOP + "SHOP_Vosges_T3_H4.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_2.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_3.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_4.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_5.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_6.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_7.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_8.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_9.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_10.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_11.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_12.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_13.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_14.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_15.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_16.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_17.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_18.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_19.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_20.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_21.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_22.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_23.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_24.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_25.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_26.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_27.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_28.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_29.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_30.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_31.png";
+			this.storeFiles[i++] = PATH_EAT + "EAT_32.png";			
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_2.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_3.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_4.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_5.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_6.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_7.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_8.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_9.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_10.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_11.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_12.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_13.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_14.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_15.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_16.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_17.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_18.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_19.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_20.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_21.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_22.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_23.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_24.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_25.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_26.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_27.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_28.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_29.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_30.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_31.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_32.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_33.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_34.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_35.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_36.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_37.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_38.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_39.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_40.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_41.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_42.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_43.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_44.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_45.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_46.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_47.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_48.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_49.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_50.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_51.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_52.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_53.png";
+			this.storeFiles[i++] = PATH_SHOP + "SHOP_54.png";
 			
 			for (var i = 0; i < this.storeFiles.length; i++)
 			{
@@ -492,7 +493,15 @@ function gameStart()
 	function mouseDown(e) {
 		//var x = e.clientX;
 		var x = e.screenX;
-		
+		var y = e.screenY;
+
+		if (x < screen.width/2 && y < screen.height/2)
+		{
+			window.location.assign("index.html");
+			//window.alert("Back button goes here.");
+		}
+		else if (y > screen.height/2)
+		{
 		if(x < screen.width/2)
 		{
 			player.action = ACTION_MOVE;	
@@ -501,7 +510,7 @@ function gameStart()
 			player.action = ACTION_MOVE;
 			player.direction = DIRECTION_RIGHT;
 		}
-
+		}
 		e.preventDefault();
 	}
 

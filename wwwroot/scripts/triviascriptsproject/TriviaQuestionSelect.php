@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include('dbConnect.php');
 
 	// DEBUG
@@ -8,7 +9,7 @@
 	// DEBUG
 	echo "Preparing first query...";
 	
-	$sql = "select * from TriviaQuestions where questionPool = ?;";
+	$sql = "select * from TriviaQuestions where questionPool = 1;
 	$stmt = sqlsrv_prepare( $conn, $sql, array( &$pool) );
 	sqlsrv_execute($stmt);
 
@@ -49,8 +50,9 @@
 						  $row["option4"],
 						  $row["option5"],
 						  $row["option6"]);
-
+		$_SESSION['questionText'] = $row["question"];
 		// DEBUG
+		
 		echo "Constructing output...";
 		
 		$output = "<h2>Question " . $questionNum . ":</h2>";

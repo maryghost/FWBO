@@ -1,0 +1,98 @@
+<!--
+Game_Flying.html code written by: Alec Zorn, project started in July 2017.
+play_flying.css code written by: Alec Zorn, project started in July 2017.
+play_flying.js code written by: Professor Henson, small changes made by Alec Zorn.
+
+Latest changes made on: October 11th, 2017
+- Slower moving buildings
+- Buildings move based on time rather than x or y speed
+- Instructions added (Change based on screen size for touch)
+- Touch events implemented and working
+
+Things Left to do:
+- Database connectivity
+	* Display high score and personal high score after the game is over
+- Noise when hitting a storefront
+- Admin Feature: Edit participating storefronts
+-->
+<html>
+  <head>
+	<link rel="stylesheet" href="css/play_flying.css" type="text/css" />
+	<link rel="stylesheet" href="css/fonts.css" type="text/css" charset="utf-8">
+	<title>Fly With Butch O'Hare</title>
+  </head>
+  <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/play_flying.js"></script>
+  <script type="text/javascript" src="javascript/splashscreen.js"></script>
+  <!-- <script type="text/javascript" src="javascript/timer.js"></script> -->
+<!--
+Feedback - Flying Game
+- Once successfully hit, can we have the store bounce up, blink and make a coin noise?
+-->
+<!--
+<a id="showBtn" class="menuToggle" href="#">Show</a>
+	<div id="menu" class="main-nav">
+		<a id="hideBtn" class="menuToggle" href="#menu">	Collapse	</a>
+
+		<a href="Index.html">
+			<img src="images/navMenu/icon_game.png" alt="Play">			</a>
+		<a href="Index.html" class="menuLink">		Play				</a>
+		
+		<a href="Score.html">
+			<img src="images/navMenu/icon_trophy.png" alt="Score">			</a>
+		<a href="Score.html" class="menuLink">		Score				</a>
+		
+		<a href="Map.html">
+			<img src="images/navMenu/icon_map.png" alt="Map">			</a>
+		<a href="Map.html" class="menuLink">			Map					</a>
+		
+		<a href="Credits.html">
+			<img src="images/navMenu/icon_home.png" alt="Credits">			</a>
+		<a href="Credits.html" class="menuLink">		Credits				</a>
+	</div>
+-->
+	
+<div id="container">
+
+<!-- 
+Splashscreen is what is displayed over the gameCanvas
+Used to show the time, score, start button, and everything else
+depending on the state of the game.
+-->
+	<div id="splashScreen">
+    <div id="top" style="width: 100%; height: 20%;">
+      <div id="hud">Time Remaining: <span id="timer"></span><br />Score: <span id="score"></span></div>
+      <!--<br />
+      <div id="hud">Score: <span id="score"></span></div>-->
+    </div>
+
+    <!-- <h1 id="gameTitle">Fly with Butch!</h1> -->
+		<h4 id="redirect" style="display: none;">Redirecting to coupon in... <span id="rTimer"></h4>
+		<button id="startButton" onclick="gameStart()"></button>
+		
+		<!-- <div id="pcInstructions" style="width: 100%;">
+			<div id="howToPlay">
+				<h3>How to Play:</h3>
+				<p>&#9754; Left Arrow to Move Left</p>
+				<p>Right Arrow to Move Right &#9755;</p>
+			</div>
+		</div> -->
+	
+		<div id="mobileInstructions">
+			<div id="howToPlay" style="font-size: 18px;">
+				<h4>How to Play:</h4>
+				<p>&#9754; Touch to move Left</p>
+				<p>Touch to move Right &#9755;</p>
+			</div>
+		</div>
+  </div>
+
+<canvas id="gameCanvas" width="800px" height="480px">No canvas support.</canvas>
+
+  <div id="debug" style="display: none;"></div>
+
+</div>
+
+</body>
+</html>

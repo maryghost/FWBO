@@ -7,8 +7,8 @@ $(function () {
 				       "D. Chalupa, dogler, hamster, croonley, frankfurt",
 				     ],
             correctAnswer: 3
-        }, {
-            question: "O'Hare store: Johnston & Murphy has been custom designing shoes for every US President since 1850. Who was the President in 1850?",
+        }, {            
+			question: "O'Hare store: Johnston & Murphy has been custom designing shoes for every US President since 1850. Who was the President in 1850?",
             choices: ["A. James Buchanan",
 		      "B. Franklin Pierce",
                       "C. Millard Fillmore",
@@ -93,9 +93,11 @@ $(function () {
         }
         ];
     
+
     
   
-    var questionCounter = 0; //Tracks question number
+  
+  	var questionCounter = 0; //Tracks question number
     var selections = []; //Array containing user choices
     var quiz = $('#quiz'); //Quiz div object
    
