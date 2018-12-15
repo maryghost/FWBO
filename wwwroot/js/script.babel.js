@@ -18,91 +18,102 @@ var handler = function() {
 //handler();
 // timer works currently, TODO: find a way to display after clicking a card. - Matt
 
-var masterArray = [{
-  'name': 'American Dog',
-  'img': 'img/Match_2.jpg'
-}, {
-  'name': 'Anntie Anne',
-  'img': 'img/Match_3.jpg'
-}, {
-  'name': 'Berghoff',
-  'img': 'img/Match_4.jpg'
-}, {
-  'name': 'BSmooth',
-  'img': 'img/Match_5.jpg'
-}, {
-  'name': 'Barbaras',
-  'img': 'img/Match_6.jpg'
-}, {
-  'name': 'Brighton',
-  'img': 'img/Match_7.jpg'
-}, {
-  'name': 'Brooks Brothers',
-  'img': 'img/Match_8.jpg'
-}, {
-  'name': 'Brookstone',
-  'img': 'img/Match_9.jpg'
-}, {
-  'name': 'Burrito Beach',
-  'img': 'img/Match_10.jpg'
-}, {
-  'name': 'CIBO',
-  'img': 'img/Match_11.jpg'
-}, {
-  'name': 'CNN',
-  'img': 'img/Match_12.jpg'
-}, {
-  'name': 'Coach',
-  'img': 'img/Match_13.jpg'
-}, {
-  'name': 'Field',
-  'img': 'img/Match_14.jpg'
-}, {
-  'name': 'Green Market',
-  'img': 'img/Match_15.jpg'
-}, {
-  'name': 'Headphone Hub',
-  'img': 'img/Match_16.jpg'
-}, {
-  'name': 'HoyPoloi',
-  'img': 'img/Match_17.jpg'
-}, {
-  'name': 'Hudson',
-  'img': 'img/Match_18.jpg'
-}, {
-  'name': 'InMotion',
-  'img': 'img/Match_19.jpg'
-}, {
-  'name': 'Johnston',
-  'img': 'img/Match_20.jpg'
-}, {
-  'name': 'MAC',
-  'img': 'img/Match_21.jpg'
-}, {
-  'name': 'McDonalds',
-  'img': 'img/Match_22.jpg'
-}, {
-  'name': 'Nuts on Clark',
-  'img': 'img/Match_23.jpg'
-}, {
-  'name': 'Rocky Mountain',
-  'img': 'img/Match_24.jpg'
-}, {
-  'name': 'Sarahs Candies',
-  'img': 'img/Match_25.jpg'
-}, {
-  'name': 'Shoe Hospital',
-  'img': 'img/Match_26.jpg'
-}, {
-  'name': 'Spirit of the Red Horse',
-  'img': 'img/Match_27.jpg'
-}, {
-  'name': 'Talie',
-  'img': 'img/Match_28.jpg'
-}, {
-  'name': 'Vosges',
-  'img': 'img/Match_29.jpg'
-}];
+var masterArray = [
+    {
+      'name': 'American Dog',
+      'img': 'img/Match_2.jpg'
+    }, {
+      'name': 'Anntie Anne',
+      'img': 'img/Match_3.jpg'
+    }, {
+      'name': 'Berghoff',
+      'img': 'img/Match_4.jpg'
+    }, {
+      'name': 'BSmooth',
+      'img': 'img/Match_5.jpg'
+    }, {
+      'name': 'Barbaras',
+      'img': 'img/Match_6.jpg'
+    }, {
+      'name': 'Brighton',
+      'img': 'img/Match_7.jpg'
+    }, {
+      'name': 'Brooks Brothers',
+      'img': 'img/Match_8.jpg'
+    }, {
+      'name': 'Brookstone',
+      'img': 'img/Match_9.jpg'
+    }, {
+      'name': 'Burrito Beach',
+      'img': 'img/Match_10.jpg'
+    }, {
+      'name': 'CIBO',
+      'img': 'img/Match_11.jpg'
+    }, {
+      'name': 'CNN',
+      'img': 'img/Match_12.jpg'
+    }, {
+      'name': 'Coach',
+      'img': 'img/Match_13.jpg'
+    }, {
+      'name': 'Field',
+      'img': 'img/Match_14.jpg'
+    }, {
+      'name': 'Green Market',
+      'img': 'img/Match_15.jpg'
+    }, {
+      'name': 'Headphone Hub',
+      'img': 'img/Match_16.jpg'
+    }, {
+      'name': 'HoyPoloi',
+      'img': 'img/Match_17.jpg'
+    }, {
+      'name': 'Hudson',
+      'img': 'img/Match_18.jpg'
+    }, {
+      'name': 'InMotion',
+      'img': 'img/Match_19.jpg'
+    }, {
+      'name': 'Johnston',
+      'img': 'img/Match_20.jpg'
+    }, {
+      'name': 'MAC',
+      'img': 'img/Match_21.jpg'
+    }, {
+      'name': 'McDonalds',
+      'img': 'img/Match_22.jpg'
+    }, {
+      'name': 'Nuts on Clark',
+      'img': 'img/Match_23.jpg'
+    }, {
+      'name': 'Rocky Mountain',
+      'img': 'img/Match_24.jpg'
+    }, {
+      'name': 'Sarahs Candies',
+      'img': 'img/Match_25.jpg'
+    }, {
+      'name': 'Shoe Hospital',
+      'img': 'img/Match_26.jpg'
+    }, {
+      'name': 'Spirit of the Red Horse',
+      'img': 'img/Match_27.jpg'
+    }, {
+      'name': 'Talie',
+      'img': 'img/Match_28.jpg'
+    }, {
+      'name': 'Vosges',
+      'img': 'img/Match_29.jpg'
+    }, {
+        'name': 'SPA',
+        'img': 'img/Match_32.jpg'
+    }, {
+        'name': 'Donkin Donuts',
+        'img': 'img/Match_34.jpg'
+    }, {
+        'name': 'Dutty Free Store',
+        'img': 'img/Match_35.jpg'
+    },
+];
 
 var tempArray = masterArray.slice();
 var NUM_CARDS = 12;
@@ -111,11 +122,14 @@ for (var i = 0; i < NUM_CARDS; i++)
 {
     var chosenCard = Math.floor(Math.random() * tempArray.length);
     cardsArray[i] = tempArray[chosenCard];
+    tempArray.splice(chosenCard, 1);
 }
 
+
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
-  return 0.5 - Math.random();
+    return 0.5 - Math.random();
 });
+
 var matchno = 0;
 var firstGuess = '';
 var secondGuess = '';
