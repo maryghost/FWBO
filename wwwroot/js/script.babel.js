@@ -21,97 +21,112 @@ var handler = function() {
 var masterArray = [
     {
       'name': 'American Dog',
-      'img': 'img/Match_2.jpg'
+      'img': 'img/img1.jpg'
     }, {
       'name': 'Anntie Anne',
-      'img': 'img/Match_3.jpg'
+      'img': 'img/img2.jpg'
     }, {
       'name': 'Berghoff',
-      'img': 'img/Match_4.jpg'
+      'img': 'img/img3.jpg'
     }, {
       'name': 'BSmooth',
-      'img': 'img/Match_5.jpg'
+      'img': 'img/img4.jpg'
     }, {
       'name': 'Barbaras',
-      'img': 'img/Match_6.jpg'
+      'img': 'img/img5.jpg'
     }, {
       'name': 'Brighton',
-      'img': 'img/Match_7.jpg'
+      'img': 'img/img6.jpg'
     }, {
       'name': 'Brooks Brothers',
-      'img': 'img/Match_8.jpg'
+      'img': 'img/img7.jpg'
     }, {
       'name': 'Brookstone',
-      'img': 'img/Match_9.jpg'
+      'img': 'img/img8.jpg'
     }, {
       'name': 'Burrito Beach',
-      'img': 'img/Match_10.jpg'
+      'img': 'img/img9.jpg'
     }, {
       'name': 'CIBO',
-      'img': 'img/Match_11.jpg'
+      'img': 'img/img10.jpg'
     }, {
       'name': 'CNN',
-      'img': 'img/Match_12.jpg'
+      'img': 'img/img11.jpg'
     }, {
       'name': 'Coach',
-      'img': 'img/Match_13.jpg'
+      'img': 'img/img12.jpg'
     }, {
       'name': 'Field',
-      'img': 'img/Match_14.jpg'
+      'img': 'img/img13.jpg'
     }, {
       'name': 'Green Market',
-      'img': 'img/Match_15.jpg'
+      'img': 'img/img14.jpg'
     }, {
       'name': 'Headphone Hub',
-      'img': 'img/Match_16.jpg'
+      'img': 'img/img15.jpg'
     }, {
       'name': 'HoyPoloi',
-      'img': 'img/Match_17.jpg'
+      'img': 'img/img16.jpg'
     }, {
       'name': 'Hudson',
-      'img': 'img/Match_18.jpg'
+      'img': 'img/img17.jpg'
     }, {
       'name': 'InMotion',
-      'img': 'img/Match_19.jpg'
+      'img': 'img/img18.jpg'
     }, {
       'name': 'Johnston',
-      'img': 'img/Match_20.jpg'
+      'img': 'img/img19.jpg'
     }, {
       'name': 'MAC',
-      'img': 'img/Match_21.jpg'
+      'img': 'img/img20.jpg'
     }, {
       'name': 'McDonalds',
-      'img': 'img/Match_22.jpg'
+      'img': 'img/img21.jpg'
     }, {
       'name': 'Nuts on Clark',
-      'img': 'img/Match_23.jpg'
+      'img': 'img/img22.jpg'
     }, {
       'name': 'Rocky Mountain',
-      'img': 'img/Match_24.jpg'
+      'img': 'img/img23.jpg'
     }, {
       'name': 'Sarahs Candies',
-      'img': 'img/Match_25.jpg'
+      'img': 'img/img24.jpg'
     }, {
       'name': 'Shoe Hospital',
-      'img': 'img/Match_26.jpg'
+      'img': 'img/img25.jpg'
     }, {
       'name': 'Spirit of the Red Horse',
-      'img': 'img/Match_27.jpg'
+      'img': 'img/img26.jpg'
     }, {
       'name': 'Talie',
-      'img': 'img/Match_28.jpg'
+      'img': 'img/img27.jpg'
     }, {
       'name': 'Vosges',
-      'img': 'img/Match_29.jpg'
+      'img': 'img/img28.jpg'
     }, {
-        'name': 'SPA',
-        'img': 'img/Match_32.jpg'
+      'name': 'SPA',
+      'img': 'img/img29.jpg'
     }, {
-        'name': 'Donkin Donuts',
-        'img': 'img/Match_34.jpg'
+      'name': 'Donkin Donuts',
+      'img': 'img/img30.jpg'
     }, {
-        'name': 'Dutty Free Store',
-        'img': 'img/Match_35.jpg'
+      'name': 'Dutty Free Store',
+      'img': 'img/img31.jpg'
+    }, {
+      'name': 'Jamba Juice',
+      'img': 'img/img32.jpg'
+    }, {
+      'name': 'Fresh Market',
+      'img': 'img/img33.jpg'
+    }, {
+      'name': 'ICE',
+      'img': 'img/img34.jpg'
+    }, {
+      'name': 'La Tapenade',
+      'img': 'img/img35.jpg'
+    }, {
+        'name': 'Argo Tea',
+        'img': 'img/img36.jpg'
     },
 ];
 
